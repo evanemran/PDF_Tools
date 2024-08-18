@@ -7,6 +7,8 @@ import 'package:pdf_maker/pages/pdf_writer.dart';
 import 'package:pdf_maker/tools/pdf_tools.dart';
 import 'package:path/path.dart' as p;
 
+import '../widgets/menu_container.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -67,8 +69,9 @@ class _HomePageState extends State<HomePage> {
         title: const Text("PDF Maker"),
         centerTitle: true,
       ),
-      
-      body: loadUi(),
+
+      body: const MenuContainer(),
+      /*body: loadUi(),*/
       
       floatingActionButton: FloatingActionButton.extended(
         tooltip: "Create",
