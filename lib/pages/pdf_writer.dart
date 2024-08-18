@@ -5,7 +5,7 @@ import 'package:pdf_maker/tools/pdf_tools.dart';
 import '../widgets/pdf_form.dart';
 
 class PdfWriter extends StatefulWidget {
-  const PdfWriter({super.key});
+  const PdfWriter({super.key,});
 
   @override
   State<PdfWriter> createState() => _PdfWriterState();
@@ -26,7 +26,7 @@ class _PdfWriterState extends State<PdfWriter> {
           children: [
             const PdfFormWidget(),
             ElevatedButton(onPressed: () {
-              PdfTools().createPdf();
+              PdfTools().createModernInvoicePdf();
             }, child: const Text("Save"))
           ],
         ),

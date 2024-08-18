@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:pdf_maker/pages/pdf_reader.dart';
 import 'package:pdf_maker/pages/pdf_writer.dart';
 import 'package:pdf_maker/tools/pdf_tools.dart';
-import 'package:thumbnailer/thumbnailer.dart';
+import 'package:path/path.dart' as p;
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -28,11 +28,11 @@ class _HomePageState extends State<HomePage> {
                   var item = snapshot.data?[index];
 
                   return ListTile(
-                    title: Text(item!.path.toString()),
-                    leading: Thumbnail(
+                    title: Text(p.basename(item!.path.toString())),
+                    /*leading: Thumbnail(
                       dataResolver: () async {
                         return (await DefaultAssetBundle.of(context)
-                            .load(item.path))
+                            .load(*//*item.path*//*"assets/demo.pdf"))
                             .buffer
                             .asUint8List();
                       },
@@ -41,7 +41,7 @@ class _HomePageState extends State<HomePage> {
                       useWrapper: true,
                       decoration: WidgetDecoration(
                           wrapperBgColor: Colors.blueAccent),
-                    ),
+                    ),*/
                     onTap: () {
                       Navigator.of(context).push(MaterialPageRoute(builder: (context) => PdfReader(file: item,)));
                     },
