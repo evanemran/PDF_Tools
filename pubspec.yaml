@@ -39,6 +39,10 @@ dependencies:
   syncfusion_flutter_pdfviewer: ^26.1.41
   path_provider: ^2.1.4
   path: ^1.8.0
+  flutter_document_scanner: ^1.1.2
+  permission_handler: ^10.0.0
+  fluttertoast: ^8.2.8
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
